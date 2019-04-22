@@ -1,0 +1,129 @@
+body{font-family: 'Gloria Hallelujah', cursive !important;  }
+.header{height:100vh ;display:grid;grid-template-columns:80%;position:relative; overflow:hidden;  
+    align-items:center ;justify-content:center;text-align:center }
+.header-title{text-align:center ; text-transform: capitalize;font-size:5rem;color:rgba(255,165,0,.6) } 
+.icon-team{display:grid;grid-template-columns:repeat(4,2rem);grid-column-gap: 0.5rem; margin:0 auto ;
+justify-content: center  }
+.social{display:block;transition:all 1s linear;text-decoration:none !important;border:1px solid black;border-radius:50% 
+;padding:0.25rem;color:black}
+.social:hover{background-color:yellow }
+.banner{z-index:3 }
+.preloader{top:0;left:0;right:0;bottom:0;position:fixed;z-index:9999 ;background-color:rgb(187, 97, 97); 
+    display:grid; justify-content:center;align-items:center;
+    }
+.aboutimg{width:100%;height:50vh;border-radius:5px}
+.child2{display:grid; }
+.underscore{background-color:yellowgreen;height:10px ;width:20rem }
+.abouttitle{padding:1rem 1rem}
+.about{margin-top:3rem;padding:3rem 0 ;width:90vw;margin:2rem auto }
+
+
+@media screen and (max-width:760px) { 
+body{font-size:1rem !important}
+.header-title{font-size:3rem ;}
+.header{background-image: url("./videos/Coffee-Bean-Roasters.jpg")
+; background-repeat: no-repeat ; background-size:cover;background-attachment: fixed
+
+}.dummyimg{width:100% ; border-radius:50% }
+.cofevid{display:none}
+.video_switch{display:none}
+
+}
+
+@media screen and (min-width:760px) {   
+.cofevid{object-fit: cover ; 
+position: absolute; z-index:-1;width:100%;height:100%
+}
+.cofevid_video{width:100%; height:100% ;object-fit:cover}
+
+.switch_container{position:absolute;bottom:5%;right:5%;z-index:3;display:block;}
+.video_switch{position:relative;width:5rem;display:flex;padding:0.25rem;
+     ;cursor:pointer; border-radius:0.25rem;}
+.imgorder{order:-1}
+
+
+
+
+.video_switch_btn{ position:absolute;top:0;height:100%;width:50%; left:0; background-color:rgb(51, 50, 50);color:gray;
+    border-radius:15px;transition:all .6s linear;  }
+    .selector{left:50%}
+}
+/* ALL sizes below */
+
+.navbaricon{top:1.5rem ;right:1.5rem ;z-index:1;color:yellow ;cursor:pointer; position:fixed; 
+    animation-name:navbar ;animation-duration: 3s ;animation-iteration-count: infinite;}
+.nav{top:0;left:0; position:fixed ;color:white ;background-color:rgba(201, 167, 33, 0.9);height:100%;
+    width:0; z-index:3 ;overflow: hidden;transition:all 0.7s linear}
+    .navbar-links{ list-style-type:none ;margin-top:1rem ;padding:0 ;text-align:left  }
+    .navbar_link{display:block;padding:0.5rem 1rem ;font-size:1.5rem ;text-decoration:none !important 
+  ;width:200% }
+.navbar_link:hover{padding-left:3rem ; background-color:darkblue;     }
+.navbaricon_click{width:10rem;   }   
+
+@keyframes navbar {  
+    0% {transform:scale(1) } 
+    50% {transform:scale(1.5)} 
+    100% {transform:scale(2)}
+   }
+
+   /*  video switcher */
+
+@media screen and (min-width:760px) {.about{display:grid; grid-template-columns:1fr 1fr; grid-column-gap: 5rem;
+  }            }
+ 
+  #drink{background-color:rgba(184, 173, 12, 0.356) ;color:red;text-align:center ;padding:3rem  }
+  .forming,.users{display:grid;grid-template-columns:60% ;justify-content: center; grid-row-gap: 4rem
+;margin-top:3rem  }
+  .feedback{border:0.1rem solid turquoise;padding:0.25rem;display:none}
+  .error{display:block; color:red ; border-color:red} 
+   .success{display:block; color:green; border-color:green}
+   input[type=text],[type=email],[type=submit]{width:100%;border-radius:10px;padding:.25rem;border:none;
+    background-color:rgba(0, 128, 0,.2);outline:none }
+    input[type=submit]{color:blue;background-color:rgb(255, 0, 0,.4)}
+    input[type=submit]:hover{color:red;text-transform:uppercase  }
+    
+    .users{display:grid; }
+    
+    .person{display:grid; grid-template-columns:auto auto 1fr; grid-row-gap:1rem;grid-gap:1rem;
+    border:1px solid green;padding:0.25rem ;border-radius:1rem;text-align:left}
+
+    
+  @media screen and (min-width:760px){.dummyimg{width:40% ; }.person{grid-template-columns:1fr 2fr 2fr;}
+      .users{padding:0 5rem ;grid-template-columns:1fr 1fr ;grid-gap:3rem }; 
+    }  
+
+   /*  GALLERY SECTION IMAGES STYLING */
+.coffepics{max-width:90vw; margin:2rem auto  }
+    .cofeimg{overflow:hidden; position:relative;background-color:rgb(231, 231, 97)} 
+    .fa-search{position:absolute;left:50%;top:50%;font-size:5rem; cursor:pointer ;color:red;
+    transition:all 0.5s ease;transform:scale(0) }
+    .myimg{width:100%;height:100%;transition:all 1s linear}
+.cofeimg:hover .myimg{opacity:0.7 ;transform:scale(1.3) }
+.cofeimg:hover .fa-search{transform:scale(1.2) translate(-50%,-50%) }
+.fa-search:hover{color:blue}
+
+
+@media screen and (min-width:760px){ 
+
+.coffepics{height:100vh ;display:grid;grid-template-columns: repeat(4,1fr);grid-template-rows: repeat(4,1fr); grid-template-areas:
+  "img1 img1 img2 img3"
+  "img1 img1 img4 img4"     
+   "img5 img6 img7 img7"
+   "img8 img9 img7 img7";
+   grid-gap:1rem
+  }.img-1{grid-area:img1} .img-2{grid-area:img2}.img-3{grid-area:img3}.img-4{grid-area:img4}
+  .img-5{grid-area:img5} .img-6{grid-area:img6}.img-7{grid-area:img7} .img-8{grid-area:img8} .img-9{grid-area:img9}
+}   
+.zoom{display:none}
+.zoom-show{display:grid;justify-content:center;align-items:center;
+  position:fixed; left:0;top:0;right:0;bottom:0 ;background-color:rgba(15, 15, 15,.5);z-index:5 }
+.fa-window-close{font-size:40px !important;cursor:pointer;top:10% ;right:10%;position:absolute;color:yellowgreen;
+transition:all 1s linear;} .fa-window-close:hover{color:blue  }
+.specificimg{background-image: url(./videos/morning-coffee-drink-AMRUSH1018.jpg)
+;background-position:center;background-size:cover;height:80vh;width:80vw;border-radius:0.5rem;border:solid .1rem red
+}
+
+/* CONTACT STYLE */
+.contactarea{background-color:gray;height:100%;}
+@media screen and (min-width:760px){.contactarea{display:grid;grid-template-columns:repeat(2,1fr);
+text-align:center ;align-items:center }    }
